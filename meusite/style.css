@@ -1,0 +1,116 @@
+/* Resetando o estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Container principal */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 650px;
+    position: relative;
+}
+
+/* Título */
+.titulo {
+    font-size: 36px;
+    color: #f06292;
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Mensagem fofa */
+.mensagem p {
+    font-size: 22px;
+    color: #d81b60;
+    font-weight: bold;
+    margin: 20px 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Botão */
+.mensagem button {
+    background-color: #f06292;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.mensagem button:hover {
+    background-color: #c2185b;
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+footer {
+    margin-top: 30px;
+}
+
+.footer-text {
+    font-size: 16px;
+    color: #f06292;
+    font-weight: bold;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Efeito de confetes */
+@keyframes confete {
+    0% { transform: translateY(-10px); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.confete {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #f06292;
+    border-radius: 50%;
+    animation: confete 3s linear infinite;
+}
+
+.confete:nth-child(odd) {
+    background-color: #ff80ab;
+}
+
+.confete:nth-child(even) {
+    background-color: #ff4081;
+}
